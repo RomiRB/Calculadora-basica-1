@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<title>ejercicio sumar, restar, multiplicar y dividir</title>
+	
+</head>
+<body>
+	<div id="container">
+		<form>
+			<h2> Calculadora Feliz!!! </h2>
+				<br>
+				<br>
+				
+					<!--......................SUMAR.........................-->
+
+					<input type="text" id="numero1" name="num1" placeholder="  1er número">
+					<input type="text" id="numero2" name="num2" placeholder="  2do número">
+			<input type="button" value="sumar" class="boton" onclick="alert(suma());">  
+					
+				<br>
+				<br>
+					<!--......................RESTA.........................-->
+
+					<input type="text" id="numero3"	name="num3" placeholder="  1er número">
+					<input type="text" id="numero4" name="num4" placeholder="  2do número">
+					<input type="button" value="resta" class="boton" onclick="alert(resta());">
+
+				<br>
+				<br>
+					<!--..................MULTIPLICAR........................-->
+
+					<input type="text" id="numero5" name="num5" placeholder="  1er número">
+					<input type="text" id="numero6" name="num6" placeholder="  2do número">
+					<input type="button" value="multiplicacion" class="boton" onclick="alert(multiplicación());">
+
+				<br>
+				<br>
+					<!--.......................DIVIDIR.........................-->
+
+					<input type="text" id="numero7" name="num7" placeholder="  1er número">
+					<input type="text" id="numero8" name="num8" placeholder="  2do número">
+					<input type="button" value="division" class="boton" onclick="alert(división());">
+		</form>
+	</div>
+	<script type="text/javascript">
+
+
+		//..........................SUMAR.........................
+
+
+			var suma= function(numero1, numero2){
+				var numero1=parseFloat(document.getElementById("numero1").value);
+				var numero2=parseFloat(document.getElementById("numero2").value);
+				var resultado=numero1+numero2;
+
+				if(isNaN(resultado)){
+					return("Ha ingresado letras, sólo ingrese números");
+				}
+
+				return resultado;
+			}
+
+			
+		//...........................RESTA........................
+
+		var resta= function(numero3, numero4){
+			var numero3=parseFloat(document.getElementById("numero3").value);
+			var numero4=parseFloat(document.getElementById("numero4").value);
+			var resultado=numero3-numero4;
+
+			if(isNaN(resultado)){
+				return("Ha ingresado letras, sólo ingrese números");
+			}
+
+			return resultado;
+		}
+
+		//.........................MULTIPLICAR........................
+
+		var multiplicación= function(numero5, numero6){
+			var numero5=parseFloat(document.getElementById("numero5").value);
+			var numero6=parseFloat(document.getElementById("numero6").value);
+			var resultado=numero5*numero6;
+
+			if(isNaN(resultado)){
+				return("Ha ingresado letras, sólo ingrese números");
+			}
+
+			return resultado;
+
+		}
+
+		//...........................DIVIDIR.........................
+
+		var división= function(numero7, numero8){
+			var numero7=parseFloat(document.getElementById("numero7").value);
+			var numero8=parseFloat(document.getElementById("numero8").value);
+			var resultado=numero7/numero8;
+
+			if(numero8==0){
+				return ("Error división por cero")
+			}
+
+			if(isNaN(resultado)){
+				return("Ha ingresado letras, sólo ingrese números");
+			}
+
+			return resultado;
+
+
+		}
+	    
+
+	</script>
+	
+</body>
+</html>
